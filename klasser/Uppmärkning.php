@@ -130,7 +130,6 @@ EOT;
 	}
 
 	private function initiera_uppmärkning(): void {
-		$datum = time(); // {$this->c(VERSIONSDATUM)}
 		echo <<< EOT
 <!doctype html>
 <html lang="sv">
@@ -139,7 +138,7 @@ EOT;
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
-	<link rel="stylesheet" type="text/css" href="css/livs.css?$datum">
+	<link rel="stylesheet" type="text/css" href="css/livs.css?{$this->c(VERSIONSDATUM)}">
 	<title>Livs {$this->c(VERSION)}</title>
 </head>
 <body>
@@ -152,7 +151,7 @@ EOT;
 		$datum = time();
 		echo <<< EOT
 	</div> <!-- flikar -->
-	<script src="js/funktioner.js?$datum"></script>
+	<script src="js/funktioner.js?{$this->c(VERSIONSDATUM)}"></script>
 </body>
 </html>
 
