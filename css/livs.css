@@ -1,0 +1,158 @@
+html {
+	background-color: #151515;
+	font-family: "Helvetica Neue";
+	font-size: 1em;
+	padding: 0;
+}
+
+* {font-family: "Helvetica Neue" !important;}
+
+h1, h2, h3, h4, h5, h6, p {color: white;}
+
+p {margin-top: 0}
+
+a, :link, :visited, :hover {text-decoration: none;}
+
+input, select {
+	background-color: black;
+	color: white;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+fieldset {font-size: 0.8em;}
+
+label.grupper {
+	border-right: thin solid #ccc;
+	padding-left: 0.4em;
+}
+
+table {
+	color: white;
+	table-layout: fixed;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: none;
+}
+
+form {
+	overflow: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+form::-webkit-scrollbar {
+	display: none;
+}
+
+caption {
+	font-size: 0.9em;
+	text-align: left;
+	margin-top: 1em;
+	padding: 0.2em;
+	background-color: #35000E;
+	border: thin solid #ccc;
+}
+
+th, td {
+	text-align: left;
+	vertical-align: middle;
+	border-spacing: 0;
+	border: thin solid #ccc;
+	margin: 0 0.2em 0 0.2em;
+	padding: 0 0.2em 0 0.2em;
+	font-size: 0.7em;
+}
+
+th {
+	background-color: #4d4d4d;
+}
+
+tr:nth-child(even) {
+	background-color: #252525;
+}
+
+hr {
+	height: 0.1em;
+	background-color: #822;
+	border: none;
+}
+
+figure {margin: 1em 0;}
+
+article {
+	padding-top: 0;
+	column-count: 3;
+	column-width: 15em;
+	column-gap: 5em;
+	column-rule: thin solid #ccc;
+}
+
+h1, h2, h3, figure {column-span: all;}
+
+.emoji {
+	line-height: 0;
+	font-size: 3em;
+}
+
+.energi {background-color: #663d00;}
+.nytta {background-color: #0F3353;}
+.makronutrienter {background-color: #0076BA;}
+.kolhydrater {background-color: #015A59;}
+.omättade {background-color: #6C6C6C;}
+.fleromättade {background-color: #004E05;}
+.vitaminer {background-color: #800D02;}
+.mineraler {background-color: #650E47;}
+.ω3 {background-color: #004E05;}
+.ω6 {background-color: #928E07;}
+
+.mättade {
+	background-color: #A9A9A9;
+	color: black;
+}
+
+.fullvärdig {background-color: green;}
+
+.sorterad {
+	color: black;
+	font-weight: bold;
+	background-color: #D2D025;
+}
+
+.grupp {
+	font-size: 0.8em;
+	font-weight: bold;
+	background-color: #072A48;
+}
+
+td.g1, td.g2, td.g3, td.g4 {text-align: right;}
+
+.mängd {width: 3em;}
+.s {font-weight: bold;}
+
+.ui-widget button {
+	padding: 0;
+	margin: 0;
+	line-height: 1em;
+}
+
+.nw {white-space: nowrap;}
+
+.fix {
+	position: absolute;
+	top: 0.5em;
+	right: 0;
+}
+
+#livsmedel td, #livsmedel th {
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 20em;
+}
