@@ -1,7 +1,7 @@
 # livs
 ## PHP-Livs: komponera måltider
 
-Ett gränssnitt för Livsmedelssverkets databas över näringsämnen i syfte att underlätta komposition av måltider. Systemkrav:
+Ett gränssnitt för Livsmedelsverkets databas över näringsämnen i syfte att underlätta komposition av måltider. Systemkrav:
 
 * PHP 8
 * SQLite3
