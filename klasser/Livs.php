@@ -2,7 +2,6 @@
 
 final class Livs {
 	public Databas $db;
-	/** @var mixed[] $livsmedelsdata */ public array $livsmedelsdata = [];
 	public string $tabellhuvud, $texthuvud;
 
 	public function __construct() {
