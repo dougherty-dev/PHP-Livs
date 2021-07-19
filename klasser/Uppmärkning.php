@@ -37,6 +37,7 @@ EOT;
 					<caption>
 						<input name="meny" class="meny" type="text" placeholder="Ny meny">
 						<button type="button" class="spara_meny" disabled>✅</button>
+						<button type="button" class="kollapsa">🔆</button>
 					</caption>
 					<thead>
 {$this->livs->tabellhuvud}
@@ -63,6 +64,7 @@ EOT;
 						<button type="button" class="radera_meny">❌</button>
 							<input name="meny" class="meny" type="text" value="{$meny['menynamn']}">
 						<button type="button" class="spara_meny">✅</button>
+						<button type="button" class="kollapsa">🔆</button>
 					</caption>
 					<thead>
 {$this->livs->tabellhuvud}
