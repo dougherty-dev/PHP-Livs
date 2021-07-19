@@ -150,7 +150,6 @@ EOT;
 	}
 
 	private function terminera_uppmärkning(): void {
-		$datum = time();
 		echo <<< EOT
 	</div> <!-- flikar -->
 	<script src="js/funktioner.js?{$this->c(VERSIONSDATUM)}"></script>
