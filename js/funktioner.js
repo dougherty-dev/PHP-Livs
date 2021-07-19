@@ -142,10 +142,6 @@
 		förnya_livmedelstabell(sortering, antal, grupper);
 	});
 
-	$("#menyer table").on("click", "caption", function() {
-		$(this).parent().find("thead, tbody, tfoot").toggle();
-	});
-
 	// ===== menyer =====
 	$("#menyer").on("click", ".spara_meny", function(e) {
 		var tabellid, tabell;
