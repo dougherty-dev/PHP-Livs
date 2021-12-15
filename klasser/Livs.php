@@ -23,7 +23,7 @@ EOT;
 		($d = $sats->fetch(PDO::FETCH_ASSOC)) === FALSE and exit();
 		$d['namn'] = htmlspecialchars($d['namn']);
 
-		$f = fn (?string $m) => (string) round(floatval($m) * $mängd / 100, 2);
+		$f = fn ($m) => (string) round(floatval($m) * $mängd / 100, 2);
 
 		return <<< EOT
 						<tr class="dra$ny" data-ingrediens-id="$id">
