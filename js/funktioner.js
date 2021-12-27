@@ -321,7 +321,7 @@
 	}
 
 	// ===== kompakt / full vy =====
-	$(".fullvy").on("click", "", function() {
+	$(".fullvy").click(function() {
 		fullvy = !fullvy;
 		$("button.fullvy").text(fullvy ? "🔼": "↕️");
 		sätt_kaka("fullvy", fullvy ? "fullvy" : "");

@@ -7,10 +7,10 @@ $db = new Databas;
 $menyid = filter_var($_POST['tabellid'], FILTER_VALIDATE_INT);
 $menyid === FALSE and die();
 
-$menynamn = rensa((string) filter_var($_POST['meny'], FILTER_SANITIZE_STRING));
+$menynamn = rensa((string) filter_var($_POST['meny'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
-$mål = array_values((array) filter_var_array($_POST['mål'], FILTER_SANITIZE_STRING));
-$data = array_values((array) filter_var_array($_POST['data'], FILTER_SANITIZE_STRING));
+$mål = array_values((array) filter_var_array($_POST['mål'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+$data = array_values((array) filter_var_array($_POST['data'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
 if ($menyid === 0) {
 	echo "INSERT INTO `meny` (`menynamn`) VALUES (:menynamn)";

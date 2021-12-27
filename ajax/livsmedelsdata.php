@@ -2,7 +2,7 @@
 
 isset($_REQUEST['id'], $_REQUEST['sista'], $_REQUEST['mängd']) or exit();
 
-$målid = (string) filter_var($_REQUEST['målid'], FILTER_SANITIZE_STRING);
+$målid = (string) filter_var($_REQUEST['målid'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 ctype_alnum($målid) or exit();
 
 $id = (int) filter_var($_REQUEST['id'], FILTER_VALIDATE_INT);
