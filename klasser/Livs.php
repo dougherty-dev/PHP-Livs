@@ -21,6 +21,7 @@ EOT;
 		$sats->bindValue(':id', $id, PDO::PARAM_INT);
 		$sats->execute();
 		($d = $sats->fetch(PDO::FETCH_ASSOC)) === FALSE and exit();
+
 		$d['namn'] = htmlspecialchars($d['namn']);
 
 		$f = fn ($m) => (string) round(floatval($m) * $mängd / 100, 2);
@@ -130,7 +131,7 @@ EOT;
 							<td class="s g2"></td>
 							<td class="s g2"></td>
 							<td class="s g1"></td>
-							<td class="s g1"></td>
+							<td class="kcal s g1"></td>
 							<td class="s g1"></td>
 							<td class="s g1"></td>
 							<td class="s g1"></td>
@@ -245,13 +246,13 @@ EOT;
 							<th class="liv g3">10</th>
 							<th class="liv g2"></th>
 							<th class="liv g2"></th>
+							<th class="liv g2">5</th>
+							<th class="liv g2">3</th>
+							<th class="liv g2">1</th>
 							<th class="liv g2"></th>
-							<th class="liv g2"></th>
-							<th class="liv g2"></th>
-							<th class="liv g2"></th>
-							<th class="liv g2"></th>
-							<th class="liv g2"></th>
-							<th class="liv g2"></th>
+							<th class="liv g2">0.05</th>
+							<th class="liv g2">0.05</th>
+							<th class="liv g2">0.1</th>
 							<th class="liv g1"></th>
 							<th class="liv g1"></th>
 							<th class="liv g1"></th>
@@ -286,13 +287,13 @@ EOT;
 							<th class="sbv g3">50</th>
 							<th class="sbv g2"></th>
 							<th class="sbv g2"></th>
+							<th class="sbv g2">12</th>
+							<th class="sbv g2">7</th>
+							<th class="sbv g2">3</th>
 							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
-							<th class="sbv g2"></th>
+							<th class="sbv g2">0.1</th>
+							<th class="sbv g2">0.1</th>
+							<th class="sbv g2">0.2</th>
 							<th class="sbv g1"></th>
 							<th class="sbv g1"></th>
 							<th class="sbv g1"></th>

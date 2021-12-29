@@ -87,7 +87,7 @@
 		$("#antal").val(antal);
 		$("#använd_grupper").prop("checked", ag ? "ag" : "");
 		populera_grupper();
-		förnya_livmedelstabell(sortering, antal, grupper);
+		förnya_livsmedelstabell(sortering, antal, grupper);
 	}
 
 	// ===== grupper =====
@@ -106,7 +106,7 @@
 		return JSON.stringify(grupper);
 	}
 
-	function förnya_livmedelstabell(sortering, antal, grupper) {
+	function förnya_livsmedelstabell(sortering, antal, grupper) {
 		var ag = $("#använd_grupper").prop("checked") ? "ag" : "";
 		$.post(document.location + "/../ajax/sortera_livs.php", {sortering: sortering, antal: antal, grupper: grupper, ag: ag}).done(function(data) {
 			$("#livsmedelstabell").replaceWith(data);
@@ -120,7 +120,7 @@
 		var antal = $("#antal option:selected").val();
 		var grupper = hämta_grupper();
 		sätt_kaka("ag", ag);
-		förnya_livmedelstabell(sortering, antal, grupper);
+		förnya_livsmedelstabell(sortering, antal, grupper);
 	});
 
 	$("fieldset#grupper input").change(function() {
@@ -129,7 +129,7 @@
 		var antal = $("#antal option:selected").val();
 		var grupper = hämta_grupper();
 		sätt_kaka("grupper", grupper);
-		if (ag == "ag") förnya_livmedelstabell(sortering, antal, grupper);
+		if (ag == "ag") förnya_livsmedelstabell(sortering, antal, grupper);
 	});
 
 	$("#sortering, #antal").change(function() {
@@ -139,7 +139,7 @@
 		sätt_kaka("sortering", sortering);
 		sätt_kaka("antal", antal);
 		$("#sortering, #antal").blur();
-		förnya_livmedelstabell(sortering, antal, grupper);
+		förnya_livsmedelstabell(sortering, antal, grupper);
 	});
 
 	$("#menyer").on("click", "table caption button.kollapsa", function() {

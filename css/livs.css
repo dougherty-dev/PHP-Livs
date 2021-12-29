@@ -1,7 +1,7 @@
 html {
 	background-color: #151515;
 	font-family: "Helvetica Neue";
-	font-size: 1em;
+	font-size: 0.83em;
 	padding: 0;
 }
 
@@ -119,6 +119,8 @@ h1, h2, h3, figure {column-span: all;}
 
 .fullvärdig {background-color: green;}
 
+.summa .kcal {background-color: #fb0011;}
+
 .sorterad {
 	color: black;
 	font-weight: bold;
@@ -155,4 +157,8 @@ td.g1, td.g2, td.g3, td.g4 {text-align: right;}
 	overflow: hidden;
 	text-overflow: ellipsis;
 	max-width: 20em;
+}
+
+.ui-widget-content {
+	background: #000;
 }
