@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
 isset($_REQUEST['term']) or die();
-$term = filter_var($_REQUEST['term'], FILTER_SANITIZE_STRING);
+$term = htmlspecialchars($_REQUEST['term']);
 $sökvärden = [];
 
 require_once dirname($_SERVER['SCRIPT_FILENAME']) . '/../klasser/Preludium.php';

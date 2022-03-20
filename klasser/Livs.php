@@ -66,8 +66,6 @@ EOT;
 							<td class="v g1">{$f($d['kolhydrater'])}</td>
 							<td class="v g1">{$f($d['protein'])}</td>
 							<td class="v g1">{$f($d['fett'])}</td>
-							<td class="v g1">{$f($d['monosackarider'])}</td>
-							<td class="v g1">{$f($d['disackarider'])}</td>
 							<td class="v g1">{$f($d['fullkorn'])}</td>
 							<td class="v g1">{$f($d['sockerarter'])}</td>
 						</tr>
@@ -132,13 +130,11 @@ EOT;
 							<td class="s g2"></td>
 							<td class="s g1"></td>
 							<td class="kcal s g1"></td>
+							<td class="epk s g1"></td>
+							<td class="epp s g1"></td>
+							<td class="epf s g1"></td>
 							<td class="s g1"></td>
-							<td class="s g1"></td>
-							<td class="s g1"></td>
-							<td class="s g1"></td>
-							<td class="s g1"></td>
-							<td class="s g1"></td>
-							<td class="s g1"></td>
+							<td class="eps s g1"></td>
 EOT;
 	}
 
@@ -219,8 +215,6 @@ EOT;
 							<th class="g1">g</th>
 							<th class="g1">g</th>
 							<th class="g1">g</th>
-							<th class="g1">g</th>
-							<th class="g1">g</th>
 						</tr>
 						<tr class="li">
 							<th colspan="2">Lägsta intag ⟳</th>
@@ -253,8 +247,6 @@ EOT;
 							<th class="liv g2">0.05</th>
 							<th class="liv g2">0.05</th>
 							<th class="liv g2">0.1</th>
-							<th class="liv g1"></th>
-							<th class="liv g1"></th>
 							<th class="liv g1"></th>
 							<th class="liv g1"></th>
 							<th class="liv g1"></th>
@@ -301,8 +293,6 @@ EOT;
 							<th class="sbv g1"></th>
 							<th class="sbv g1"></th>
 							<th class="sbv g1"></th>
-							<th class="sbv g1"></th>
-							<th class="sbv g1"></th>
 						</tr>
 						<tr class="rdi">
 							<th colspan="2">RDI ⟳</th>
@@ -336,9 +326,7 @@ EOT;
 							<th class="rdiv g2">0.1</th>
 							<th class="rdiv g2">0.3</th>
 							<th class="rdiv g1"></th>
-							<th class="rdiv g1"></th>
-							<th class="rdiv g1"></th>
-							<th class="rdiv g1"></th>
+							<th class="rdiv g1">2000</th>
 							<th class="rdiv g1"></th>
 							<th class="rdiv g1"></th>
 							<th class="rdiv g1"></th>
@@ -382,8 +370,6 @@ EOT;
 							<th class="g1 makronutrienter">Kolh</th>
 							<th class="g1 makronutrienter">Prot</th>
 							<th class="g1 makronutrienter">Fett</th>
-							<th class="g1 kolhydrater">MS</th>
-							<th class="g1 kolhydrater">DS</th>
 							<th class="g1 kolhydrater">Fullk</th>
 							<th class="g1 kolhydrater">Sock</th>
 						</tr>

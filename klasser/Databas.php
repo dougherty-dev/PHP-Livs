@@ -14,7 +14,7 @@ final class Databas {
 	}
 
 	public function mb_like(string $mask, string $sträng): int {
-		$mask = str_replace(['%', '_'], ['.*?', '.'], preg_quote($mask, "/"));
+		$mask = str_replace(['%', '_'], ['.*?', '.'], preg_quote($mask, '/'));
 		$mask = "/^$mask$/ui";
 		return (int) preg_match($mask, $sträng);
 	}

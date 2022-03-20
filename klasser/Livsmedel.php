@@ -81,8 +81,6 @@ EOT;
 					<option value="kolhydrater">Kolhydrater</option>
 					<option value="protein">Protein</option>
 					<option value="fett">Fett</option>
-					<option value="monosackarider">Monosackarider</option>
-					<option value="disackarider">Disackarider</option>
 					<option value="fullkorn">Fullkorn</option>
 					<option value="sockerarter">Socker</option>
 				</optgroup>

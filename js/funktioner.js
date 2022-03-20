@@ -296,17 +296,35 @@
 					if (!isNaN(v)) summa += v;
 				});
 
-				$(table + "tfoot.summering tr.summa td.s").eq(i).text(avrunda(summa, 2));
+				$(table + "tfoot.summering tr.summa td.s").eq(i).text(avrunda(summa, 1));
 				summera_kolumn(table + "thead tr.rdi th.rdiv", table + "tfoot.summering tr.procent.rdi td.s", summa, i);
 				summera_kolumn(table + "thead tr.li th.liv", table + "tfoot.summering tr.procent.li td.s", summa, i);
 				summera_kolumn(table + "thead tr.sb th.sbv", table + "tfoot.summering tr.procent.sb td.s", summa, i);
+		});
+		beräkna_energiprocent(table);
+	}
+
+	function beräkna_energiprocent(table) {
+		var kcal, epk, epp, epf, eps;
+		$(table + "tfoot.summering tr.summa td.kcal").each(function(i) {
+			kcal = $(this).eq(i).text();
+			epk = avrunda(100 * 4 * $(table + "tfoot.summering tr.summa td.epk").text() / kcal, 0);
+			epp = avrunda(100 * 4 * $(table + "tfoot.summering tr.summa td.epp").text() / kcal, 0);
+			epf = avrunda(100 * 9 * $(table + "tfoot.summering tr.summa td.epf").text() / kcal, 0);
+			eps = avrunda(100 * 4 * $(table + "tfoot.summering tr.summa td.eps").text() / kcal, 0);
+			kcal = avrunda(100 * kcal / 2000, 0);
+			$(table + "tfoot.summering tr.procent td.kcal").text(kcal).addClass("energi");
+			$(table + "tfoot.summering tr.procent td.epk").text(epk).addClass("energi");
+			$(table + "tfoot.summering tr.procent td.epp").text(epp).addClass("energi");
+			$(table + "tfoot.summering tr.procent td.epf").text(epf).addClass("energi");
+			$(table + "tfoot.summering tr.procent td.eps").text(eps).addClass("energi");
 		});
 	}
 
 	function summera_kolumn(intag, resultat, summa, i) {
 		var iv = parseFloat($(intag).eq(i).text());
 		if (iv > 0) {
-			var p = avrunda(100 * summa / iv, 2);
+			var p = avrunda(100 * summa / iv, 0);
 			$(resultat).eq(i).text(p);
 			$(resultat).eq(i).toggleClass("fullvärdig", p >= 100);
 		}

@@ -1,7 +1,7 @@
 <?php declare(strict_types = 1);
 
-define('VERSION', '1.0');
-define('VERSIONSDATUM', '2021-12-27k');
+define('VERSION', '1.0.1');
+define('VERSIONSDATUM', '2022-03-17');
 define('FÖRFATTARE', 'Niklas Dougherty');
 
 define('FELRAPPORTERING', TRUE);

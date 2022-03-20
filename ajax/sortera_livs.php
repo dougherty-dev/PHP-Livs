@@ -91,8 +91,6 @@ EOT;
 							<td class="g1{$k['protein']}">{$r['protein']}</td>
 							<td class="g1{$k['fett']}">{$r['fett']}</td>
 							<td class="g1{$k['monosackarider']}">{$r['monosackarider']}</td>
-							<td class="g1{$k['disackarider']}">{$r['disackarider']}</td>
-							<td class="g1{$k['fullkorn']}">{$r['fullkorn']}</td>
 							<td class="g1{$k['sockerarter']}">{$r['sockerarter']}</td>
 						</tr>
 
