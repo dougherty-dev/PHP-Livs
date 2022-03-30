@@ -78,7 +78,7 @@ EOT;
 		return <<< EOT
 					<tfoot class="summering">
 						<tr>
-							<td colspan="40"><button type="button" class="addera_mål">➕</button></td>
+							<td colspan="38"><button type="button" class="addera_mål">➕</button></td>
 						</tr>
 {$this->tr('summa', '∑ Näringsämnen')}
 {$this->tr('procent li', '% Lägsta intag ⟳')}
@@ -162,7 +162,7 @@ EOT;
 							<th class="g1 nytta">Nytta</th>
 							<th class="g1 energi">Ener.</th>
 							<th colspan="3" class="g1 makronutrienter">Makronutrienter</th>
-							<th colspan="4" class="g1 kolhydrater">Kolhydrater ⟳</th>
+							<th colspan="2" class="g1 kolhydrater">Kolhydrater ⟳</th>
 						</tr>
 						<tr>
 							<th colspan="2">Struktur</th>
@@ -175,7 +175,7 @@ EOT;
 							<th class="g2 ω3" title="ω−3">20:5</th>
 							<th class="g2 ω3" title="ω−3">22:5</th>
 							<th class="g2 ω3" title="ω−3">22:6</th>
-							<th colspan="9" class="g1"></th>
+							<th colspan="7" class="g1"></th>
 						</tr>
 						<tr>
 							<th colspan="2">Enhet</th>

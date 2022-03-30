@@ -45,7 +45,7 @@ foreach ($rad as $r) {
 			$grupp = GRUPPERINGAR[$r['gruppering']];
 			$tabell .= <<< EOT
 						<tr>
-							<th colspan="40" class="grupp">$grupp</th>
+							<th colspan="38" class="grupp">$grupp</th>
 						</tr>
 
 EOT;

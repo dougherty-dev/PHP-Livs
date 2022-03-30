@@ -81,7 +81,7 @@ EOT;
 				$menyer .= <<< EOT
 					<tbody id="$målid" class="måldefinition">
 						<tr>
-							<td colspan="40">
+							<td colspan="38">
 								<input name="mål[$målid]" class="mål" type="text" placeholder="Mål" value="{$mål['målnamn']}">
 								<button type="button" class="radera_mål">❌</button>
 							</td>
