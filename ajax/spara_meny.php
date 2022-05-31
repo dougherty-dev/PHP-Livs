@@ -7,10 +7,10 @@ $db = new Databas;
 $menyid = filter_var($_POST['tabellid'], FILTER_VALIDATE_INT);
 $menyid === FALSE and die();
 
-$menynamn = rensa((string) filter_var($_POST['meny'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+$menynamn = rensa((string) filter_var($_POST['meny'], FILTER_SANITIZE_SPECIAL_CHARS));
 
-$mål = array_values((array) filter_var_array($_POST['mål'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
-$data = array_values((array) filter_var_array($_POST['data'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+$mål = (isset($_POST['mål'])) ? array_values((array) filter_var_array($_POST['mål'], FILTER_SANITIZE_SPECIAL_CHARS)) : [];
+$data = (isset($_POST['data'])) ? array_values((array) filter_var_array($_POST['data'], FILTER_SANITIZE_SPECIAL_CHARS)) : [];
 
 if ($menyid === 0) {
 	echo "INSERT INTO `meny` (`menynamn`) VALUES (:menynamn)";
@@ -18,7 +18,7 @@ if ($menyid === 0) {
 	$sats->bindValue(':menynamn', $menynamn, PDO::PARAM_STR);
 	$sats->execute();
 	$sats = $db->livs->query("SELECT MAX(`menyid`) FROM `meny`");
-	$nytt_menyid = ($sats !== FALSE) ? $sats->fetch()[0] : 0;
+	$nytt_menyid = ($sats !== FALSE) ? $sats->fetchAll()[0] : 0;
 } else {
 	$sats = $db->livs->prepare("REPLACE INTO `meny` (`menyid`, `menynamn`) VALUES (:menyid, :menynamn)");
 	$sats->bindValue(':menyid', $menyid, PDO::PARAM_INT);

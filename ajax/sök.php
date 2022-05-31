@@ -9,7 +9,7 @@ $db = new Databas;
 $sats = $db->livs->prepare('SELECT `id`, `namn` FROM `livs` WHERE `namn` LIKE :term LIMIT 50');
 $sats->bindValue(':term', "%$term%", PDO::PARAM_STR);
 $sats->execute();
-while ($r = $sats->fetch(PDO::FETCH_ASSOC)) {
+foreach ($sats->fetchAll(PDO::FETCH_ASSOC) as $r) {
 	$r['namn'] = htmlspecialchars($r['namn']);
 	$sökvärden[] = ['value' => $r['id'], 'label' => $r['namn']];
 }

@@ -20,13 +20,12 @@ EOT;
 		$sats = $this->db->livs->prepare('SELECT * FROM `livs` WHERE `id`=:id LIMIT 1');
 		$sats->bindValue(':id', $id, PDO::PARAM_INT);
 		$sats->execute();
-		($d = $sats->fetch(PDO::FETCH_ASSOC)) === FALSE and exit();
+		foreach ($sats->fetchAll(PDO::FETCH_ASSOC) as $d) {
+			$d['namn'] = htmlspecialchars($d['namn']);
 
-		$d['namn'] = htmlspecialchars($d['namn']);
+			$f = fn ($m) => (string) round(floatval($m) * $mängd / 100, 2);
 
-		$f = fn ($m) => (string) round(floatval($m) * $mängd / 100, 2);
-
-		return <<< EOT
+			return <<< EOT
 						<tr class="dra$ny" data-ingrediens-id="$id">
 							<td class="nw"><button type="button" class="radera_ingrediens">✖️</button>
 								<input type="hidden" name="data[$målid][]" value="$id|$mängd">
@@ -71,7 +70,8 @@ EOT;
 						</tr>
 
 EOT;
-
+		}
+	return '';
 	}
 
 	public function summering(): string {

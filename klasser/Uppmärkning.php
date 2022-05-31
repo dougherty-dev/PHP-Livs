@@ -74,7 +74,7 @@ EOT;
 			$sats = $this->livs->db->livs->prepare("SELECT `målid`, `målnamn` FROM `mål` WHERE `menyid`=:menyid ORDER BY `målid`");
 			$sats->bindValue(':menyid', $meny['menyid'], PDO::PARAM_INT);
 			$sats->execute();
-			$måldata = $sats->fetchAll(PDO::FETCH_ASSOC);
+			$måldata = ($sats !== FALSE) ? $sats->fetchAll(PDO::FETCH_ASSOC) : FALSE;
 			if ($måldata === FALSE) return '';
 			foreach($måldata as $mål) {
 				$målid = slumpid();
@@ -94,7 +94,7 @@ EOT;
 				$sats->bindValue(':menyid', $meny['menyid'], PDO::PARAM_INT);
 				$sats->bindValue(':malid', $mål['målid'], PDO::PARAM_INT);
 				$sats->execute();
-				$ingrediensdata = $sats->fetchAll(PDO::FETCH_ASSOC);
+				$ingrediensdata = ($sats !== FALSE) ? $sats->fetchAll(PDO::FETCH_ASSOC) : FALSE;
 				if ($ingrediensdata === FALSE) return '';
 				foreach ($ingrediensdata as $ingrediensid => $ingrediens) {
 					$menyer .= $this->livs->hämta_ingrediens((int) $ingrediens['livsmedelsid'], $målid, (float) $ingrediens['mängd']);

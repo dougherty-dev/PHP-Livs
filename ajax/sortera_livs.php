@@ -10,7 +10,7 @@ $antal = (int) filter_var($_REQUEST['antal'], FILTER_VALIDATE_INT);
 
 $sql = "SELECT * FROM `livs` ORDER BY CAST(`$sortering` AS FLOAT) DESC LIMIT $antal";
 if ($_REQUEST['ag'] === 'ag') {
-	$grupp_json = json_decode($_REQUEST['grupper'], TRUE);
+	$grupp_json = (array) json_decode($_REQUEST['grupper'], TRUE);
 	if ($grupp_json !== FALSE) {
 		$grupplista = [];
 		foreach (array_keys($grupp_json) as $index) {
